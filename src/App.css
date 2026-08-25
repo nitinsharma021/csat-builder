@@ -1441,14 +1441,17 @@ button:disabled {
     align-items: flex-start;
   }
 
-  .preview-area {
-    min-height: 660px;
-  }
+ .preview-area {
+  min-height: 0;
+  height: auto;
+  padding: 20px 10px 30px;
+}
 
-  .phone {
-    width: min(290px, calc(100vw - 40px));
-    height: 590px;
-  }
+ .phone {
+  width: min(270px, calc(100vw - 70px));
+  height: 540px;
+  max-height: calc(100vh - 180px);
+}
 
   .preview-tabs button {
     padding: 8px 9px;
@@ -1463,7 +1466,7 @@ button:disabled {
   max-width: 100%;
 
   margin: 5px auto;
-  padding: 10px;
+  padding: 5px;
 
   box-sizing: border-box;
   overflow: hidden;
@@ -1476,8 +1479,8 @@ button:disabled {
 /* Feedback title */
 .feedback-card h2 {
   text-align: center;
-  line-height: 1.15;
-  margin: 2px 0 7px;
+  line-height: 1.12;
+  margin: 0px 0 5px;
 
   max-width: 100%;
   overflow-wrap: break-word;
@@ -1490,7 +1493,7 @@ button:disabled {
   align-items: center;
 
   gap: 3px;
-  margin: 0 0 7px;
+  margin: 0 0 5px;
 
   flex-shrink: 0;
 }
@@ -1515,7 +1518,7 @@ button:disabled {
   display: flex;
   flex-direction: column;
 
-  gap: 4px;
+  gap: 3px;
   margin: 0 0 7px;
 
   flex-shrink: 0;
@@ -1523,9 +1526,9 @@ button:disabled {
 
 .feedback-card .preview-options button {
   width: 100%;
-  min-height: 28px;
+  min-height: 24px;
 
-  padding: 5px 8px;
+  padding: 3px 8px;
 
   box-sizing: border-box;
 
@@ -1538,8 +1541,8 @@ button:disabled {
 /* Comment */
 .feedback-card .preview-comment {
   width: 100%;
-  height: 38px;
-  min-height: 38px;
+  height: 34px;
+  min-height: 34px;
 
   box-sizing: border-box;
 
@@ -1557,9 +1560,9 @@ button:disabled {
 /* Submit */
 .feedback-card .preview-button {
   width: 100%;
-  min-height: 31px;
+  min-height: 28px;
 
-  padding: 6px 8px;
+  padding: 4px 8px;
 
   box-sizing: border-box;
 
@@ -1574,4 +1577,252 @@ button:disabled {
   display: block;
   margin: 0 auto 14px;
   border-radius: 14px;
+}
+/* =========================================
+   MOBILE RESPONSIVE PREVIEW
+   ========================================= */
+
+@media (max-width: 800px) {
+  .builder-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .preview-panel {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .preview-header {
+    position: relative;
+    height: auto;
+    min-height: 110px;
+    padding: 16px 20px;
+    box-sizing: border-box;
+  }
+
+  .preview-area {
+    width: 100%;
+    min-height: auto;
+    height: auto;
+    padding: 20px 10px 30px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow: visible;
+  }
+
+  .preview-tabs {
+    width: min(300px, calc(100vw - 40px));
+    margin: 0 auto 20px;
+    box-sizing: border-box;
+  }
+
+  .preview-tabs button {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .phone {
+    width: 270px;
+    height: 540px;
+    max-width: calc(100vw - 80px);
+    max-height: none;
+
+    flex-shrink: 0;
+    margin: 0 auto;
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 500px) {
+  .preview-header {
+    min-height: 105px;
+    padding: 14px 18px;
+  }
+
+  .preview-header h2 {
+    font-size: 22px;
+  }
+
+  .preview-header p {
+    font-size: 14px;
+  }
+
+  .preview-area {
+    padding: 16px 8px 30px;
+  }
+
+  .preview-tabs {
+    width: min(285px, calc(100vw - 30px));
+    margin-bottom: 18px;
+  }
+
+  .preview-tabs button {
+    font-size: 12px;
+    padding: 8px 8px;
+  }
+
+  .phone {
+    width: 250px;
+    height: 500px;
+    max-width: calc(100vw - 50px);
+  }
+}
+/* =========================================
+   FINAL MOBILE PHONE PREVIEW SIZE
+   ========================================= */
+
+@media (max-width: 500px) {
+  .preview-area {
+    width: 100%;
+    padding: 15px 10px 25px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .preview-tabs {
+    width: 285px;
+    max-width: calc(100vw - 30px);
+    margin: 0 auto 15px;
+  }
+
+  .phone {
+    width: 230px !important;
+    height: 430px !important;
+    max-width: calc(100vw - 50px) !important;
+    max-height: 430px !important;
+    margin: 0 auto !important;
+    flex-shrink: 0;
+  }
+
+  .phone-screen {
+    overflow: hidden;
+  }
+}
+/*/* =========================================
+   PREVIEW TABS - PROFESSIONAL RESPONSIVE
+   ========================================= */
+
+.preview-tabs {
+  width: 305px;
+  max-width: calc(100% - 32px);
+
+  margin: 0 auto 24px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 4px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+  border: 1px solid #dce3ea;
+  border-radius: 14px;
+
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+}
+
+.preview-tabs button {
+  flex: 1;
+  width: 33.333%;
+  min-width: 0;
+
+  height: 46px;
+
+  padding: 0 8px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: transparent;
+
+  color: #6f7b8f;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+/* Hover */
+.preview-tabs button:hover {
+  background: #f2f8f7;
+  color: #0f8278;
+}
+
+/* Active tab */
+.preview-tabs button.active {
+  background: #0f8278;
+  color: #ffffff;
+
+  box-shadow: 0 3px 8px rgba(15, 130, 120, 0.22);
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 1100px) {
+  .preview-tabs {
+    width: 300px;
+  }
+
+  .preview-tabs button {
+    height: 44px;
+    font-size: 14px;
+  }
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 800px) {
+  .preview-tabs {
+    width: 300px;
+    max-width: calc(100% - 24px);
+
+    margin-bottom: 20px;
+  }
+
+  .preview-tabs button {
+    height: 42px;
+    padding: 0 5px;
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 500px) {
+  .preview-tabs {
+    width: calc(100% - 24px);
+    max-width: 300px;
+
+    padding: 3px;
+    border-radius: 12px;
+  }
+
+  .preview-tabs button {
+    height: 40px;
+
+    padding: 0 3px;
+
+    font-size: 12px;
+    border-radius: 9px;
+  }
 }
