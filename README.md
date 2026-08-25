@@ -4,11 +4,11 @@ A responsive React-based CSAT (Customer Satisfaction) Campaign Builder that allo
 
 ## Live Demo
 
-https://YOUR-VERCEL-URL.vercel.app
+https://csat-builder-sepia.vercel.app/
 
 ## GitHub Repository
 
-https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+https://github.com/nitinsharma021/csat-builder
 
 ## Features
 
